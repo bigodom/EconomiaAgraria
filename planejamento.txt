@@ -1,0 +1,4 @@
+Quantidade de hectares
+quantidade de gado
+custos de manutenção do rebanho
+calcula o lucro
