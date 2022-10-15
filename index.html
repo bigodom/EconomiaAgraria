@@ -15,7 +15,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-fill">
         <a class="navbar-brand" href="/" style="padding-left: 3%;">
-          <img src="../static/BuscaBicoLogo.jpeg" style="width: 166px; height: 52px;" alt="">
+          <img src="./src/static/economiaAgricolaMiniatura.jpg" style="width: 100px; height: 52px;" alt="">
         </a>
         <button class="navbar-toggler" style="margin-right: 5%;" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
           <span class="navbar-toggler-icon"></span>
@@ -35,39 +35,93 @@
         </div>
         </div>
       </nav>
-<div style="text-align: -webkit-center;">
-          <!-- Prepare a DOM with a defined width and height for ECharts -->
-    <div id="main" style="width: 600px;height:400px;"></div>
-    <script type="text/javascript">
-      // Initialize the echarts instance based on the prepared dom
-      var myChart = echarts.init(document.getElementById('main'));
+      <div>
+        <p class="title_main" style="margin-top: 20px">Adicione com os dados do gráfico</p>
+      </div>
 
-      // Specify the configuration items and data for the chart
-      var option = {
-        title: {
-          text: 'ECharts Example'
-        },
-        tooltip: {},
-        legend: {
-          data: ['sales']
-        },
-        xAxis: {
-          data: ['Shirts', 'Cardigans', 'Chiffons', 'Pants', 'Heels', 'Socks']
-        },
-        yAxis: {},
-        series: [
-          {
-            name: 'sales',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
+      <form id="form" onsubmit="return false;">
+        <div>
+        <label for="Nome">Entre com o nome:</label>
+        <input style="width: 120px" type="text" id="Nome"/>
+        <label style="margin-left: 10px;"for="Dado">Entre com o dado:</label>
+        <input style="width: 50px" type="text" id="Dado"/>
+        <input type="submit" class="btn btn-light" style="margin: 10px; margin-left: 20px;" onclick="teste()" value="Adicionar dado" />
+        </div>
+
+     </form>
+    
+      <div class="btt">
+        <input class="btt_txt btn btn-light" style="margin-top: 20px" type="button" onclick="ec();" value="Gerar gráfico">
+      </div>
+
+      <div style="text-align: -webkit-center;">
+      <div id="main" style="width: 600px;height:400px;"></div>
+        <script type="text/javascript">
+          
+          var nomes = [];
+          var dados = [];
+
+          function teste() {
+            var dado = document.getElementById("Dado").value;
+            var nome = document.getElementById("Nome").value;
+            alert("Informação adicionada: \n" + "Nome: " + nome + "\n" + "Dado: " + dado);
+            dados.push(dado);
+            nomes.push(nome);
           }
-        ]
-      };
 
-      // Display the chart using the configuration items and data just specified.
-      myChart.setOption(option);
-    </script>
-</div>
+          function ec(){
+            // Initialize the echarts instance based on the prepared dom
+            var myChart = echarts.init(document.getElementById('main'));
+            // Specify the configuration items and data for the chart
+            var option = {
+              title: {
+                text: ''
+              },
+              tooltip: {},
+              legend: {
+                data: ['Teste']
+              },
+              xAxis: {
+                data: nomes
+              },
+              yAxis: {},
+              series: [
+                {
+                  name: '',
+                  type: 'bar',
+                  data: dados
+                }
+              ]
+            };
+
+            // Display the chart using the configuration items and data just specified.
+            myChart.setOption(option);
+          }
+      </script>
+    </div>
+
+    <style>
+      .title_main{
+        text-align: center;
+        font-size: 30px;
+      }
+      .btt{
+        display: flex;
+        justify-content: center;
+      }
+      .pdd_top{
+        padding-top: 30px;
+      }
+      .pdd_bot{
+        padding-bottom: 30px;
+      }
+      #form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+     
       <div><p style="text-align: center;">Todos os direitos reservados.</p></div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
