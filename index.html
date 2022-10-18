@@ -23,17 +23,10 @@
         </button>
         <div class="collapse navbar-collapse" style="justify-content: space-between;" id="navbarNavAltMarkup">
           <div class="navbar-nav navbuttons">
-            <a class="nav-item nav-link active navbutton" href="#">Home</a>
-            <a class="nav-item nav-link active navbutton" href="#">botao 1</a>
-            <a class="nav-item nav-link active navbutton" href="#">botao 2</a>
+            <a href="#evolucao"><button type="button" class="btn btn-outline-light me-2">Evolução</button></a>
+            <a href="#mercado"><button type="button" class="btn btn-outline-light me-2">Mercado</button></a>
+            <a href="#ambiente"><button type="button" class="btn btn-outline-light me-2">Ambiente</button></a>
           </div>
-          <div class="navbar ">
-            <form class="container-fluid">
-                <a href="#"><button class="btn btn-outline-success me-2" type="button">botao 3</button></a>
-                <a href="#"><button class="btn btn-outline-success me-2" type="button">botao 4</button></a>
-                <a href="#"><button class="btn btn-outline-success me-2" type="button">botao 5</button></a>
-            </form>
-        </div>
         </div>
       </nav>
     </section>
@@ -41,7 +34,7 @@
       <div style="text-align: center;">
         
       </div>
-      <div class="topico">
+      <div class="topico" id="evolucao">
         <h1 style="padding-bottom: 3vw;">A evolução do agronegócio no Brasil</h1>
         <p>No processo de cálculo do PIB do agronegócio, o Cepea calcula os PIBs dos seus segmentos de insumos, agropecuária, agroindústria e agrosserviços, cujas participações médias no PIB brasileiro, de 1995 a 2021, foram 0,9%, 4,6%, 7,4% e 24,7%.</p>
         <p>O valor bruto da produção (VBP) agropecuária alcançou R$ 1,195 trilhão em 2021, dos quais R$ 814,17 bilhões na produção agrícola e R$ 381,57 no segmento pecuário.</p>
@@ -51,44 +44,40 @@
         <div><p>fonte: gov.br</p></div>
 
       </div>
-      <div class="topico">
-        <h1>Demanda e oferta em mercados agrícolas</h1>
-        <p>O mercado agrícola, em termos de demanda e oferta, é sempre analisado a 
-          semelhança de um mercado em concorrência perfeita, sendo muitas vezes citado 
-          como exemplo desse tipo de estrutura mercadológica.</p>
+      <div class="topico" id="mercado">
+        <h1 style="margin-bottom: 5vw;">Demanda e oferta em mercados agrícolas</h1>
+        <p>O mercado agrícola, em termos de demanda e oferta, é sempre analisado a semelhança de um  <abbr style="color: burlywood;" title="Muitos vendedores, entrada fácil, produtos idênticos e vendedores determinam preço.">mercado em concorrência perfeita</abbr>, sendo muitas vezes citado como exemplo desse tipo de estrutura mercadológica.</p>
+        <p></p>
+        
       </div>
       <div class="topico">
-        
+        <h3 style="margin-bottom: 5vw;">Como é feito a curva de oferta e demanda</h3>
+        <p>A curva de demanda possui uma curva decrescente, resultado do princípio de: quanto maior o preço, menor a quantidade demandada correspondente</p>
+        <p>A curva de oferta possui uma curva crescente, devido ao comportamento dos produtores de aumentar as quantidades ofertadas caso os preços aumentem.</p>
       </div>
 
       <!--Gráfico-->
-      <div>
-        <p class="title_main" style="margin-top: 20px">Adicione com os dados do gráfico</p>
+      <div class="title_main">
+        <h1 style="margin-bottom: 5vw;">Simulador de oferta e demanda</h1>
+        <h3>Adicione os valores ao gráfico</h3>
       </div>
 
       <form id="form" onsubmit="return false;">
         <div>
-          <label for="Nome">Entre com o nome:</label>
-          <input style="width: 120px" type="text" id="Nome"/>
-          <label style="margin-left: 10px;"for="Dado">Entre com o dado:</label>
-          <input style="width: 50px" type="text" id="Dado"/>
-          <input type="submit" class="btn btn-light" style="margin: 10px; margin-left: 20px;" onclick="teste()" value="Adicionar dado" />
+          <label for="Quantidade">Insira a quantidade:</label>
+          <input style="width: 120px" type="text" id="Quantidade"/>
+          <label style="margin-left: 10px;"for="Preco">Insira o preço:</label>
+          <input style="width: 50px" type="text" id="Preco"/>
+          <input type="submit" class="btn btn-light" style="margin: 10px; margin-left: 20px;" onclick="teste(),ec();" value="Adicionar dado" />
         </div>
 
       </form>
-    
-      <div class="btt">
-        <input class="btt_txt btn btn-light" style="margin-top: 20px" type="button" onclick="ec();" value="Gerar gráfico">
-      </div>
 
       <div style="text-align: -webkit-center;">
-      <div id="grafico1" style="width: 600px;height:400px;"></div>
-
-
-    </div>
-    <div>
       <div id="grafico4" style="width: 600px;height:400px;"></div>
     </div>
+
+    <div class="topico" id="ambiente"></div>
      
     <div><p style="text-align: center;">Todos os direitos reservados.</p></div>
 
