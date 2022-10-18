@@ -12,8 +12,9 @@ function teste() {
 
 function ec(){
   var chartDom = document.getElementById('grafico4');
-  var myChart = echarts.init(chartDom, 'dark');
+  var myChart = echarts.init(chartDom);
   var option;
+  chartDom.style.display = 'block'
 
 option = {
 title: {
@@ -22,7 +23,7 @@ title: {
   top: 0
 },
 tooltip: {
-  formatter: '({c})R$'
+  formatter: '({c})'
 },
 xAxis: {
   name: 'Quant'
@@ -48,16 +49,29 @@ option && myChart.setOption(option);
 }
 {
   var chartDom = document.getElementById('grafico2');
-  var myChart = echarts.init(chartDom, 'dark');
+  var myChart = echarts.init(chartDom);
   var option;
 
   option = {
+    title: {
+      text: "Grafico de oferta e demanda",
+      left: 'center',
+      top: 0
+    },
     xAxis: {
       type: 'category',
+      name: 'Ano',
       data: ['1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
     },
     yAxis: {
-      type: 'value'
+      name: 'ano'
+    },
+
+    yAxis: {
+      name:'Valor(em milhões)',
+      axisLabel: {
+        formatter: 'R${value}'
+      }
     },
     tooltip: {
       trigger: 'axis'
@@ -76,7 +90,7 @@ option && myChart.setOption(option);
 }
 {
   var chartDom = document.getElementById('grafico3');
-  var myChart = echarts.init(chartDom, 'dark');
+  var myChart = echarts.init(chartDom);
   var option;
 
   option = {
