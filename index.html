@@ -14,7 +14,7 @@
 
     <!-- navbar -->
   <section class="header">
-    <nav class="navbar navbar-expand-lg navbar-dark nav-fill">
+    <nav class="navbar navbar-expand-lg bg-light nav-fill">
         <a class="navbar-brand" href="/" style="padding-left: 3%;">
           <img src="./src/static/economiaAgricolaMiniatura.jpg" style="width: 100px; height: 52px;" alt="">
         </a>
@@ -23,9 +23,9 @@
         </button>
         <div class="collapse navbar-collapse" style="justify-content: space-between;" id="navbarNavAltMarkup">
           <div class="navbar-nav navbuttons">
-            <a href="#evolucao"><button type="button" class="btn btn-outline-light me-2">Evolução</button></a>
-            <a href="#mercado"><button type="button" class="btn btn-outline-light me-2">Mercado</button></a>
-            <a href="#ambiente"><button type="button" class="btn btn-outline-light me-2">Ambiente</button></a>
+            <a href="#evolucao"><button type="button" class="btn btn-outline-dark me-2">Evolução</button></a>
+            <a href="#mercado"><button type="button" class="btn btn-outline-dark me-2">Mercado</button></a>
+            <a href="#ambiente"><button type="button" class="btn btn-outline-dark me-2">Ambiente</button></a>
           </div>
         </div>
       </nav>
@@ -38,8 +38,8 @@
         <h1 style="padding-bottom: 3vw;">A evolução do agronegócio no Brasil</h1>
         <p>No processo de cálculo do PIB do agronegócio, o Cepea calcula os PIBs dos seus segmentos de insumos, agropecuária, agroindústria e agrosserviços, cujas participações médias no PIB brasileiro, de 1995 a 2021, foram 0,9%, 4,6%, 7,4% e 24,7%.</p>
         <p>O valor bruto da produção (VBP) agropecuária alcançou R$ 1,195 trilhão em 2021, dos quais R$ 814,17 bilhões na produção agrícola e R$ 381,57 no segmento pecuário.</p>
-        <div id="grafico2" style="width: 600px;height:400px;"></div>
-        <div id="grafico3" style="width: 600px;height:400px;"></div>
+        <div id="grafico2" style="width: 600px;height:400px; margin-top: 3vw;"></div>
+        <div id="grafico3" style="width: 600px;height:400px; margin-top: 3vw;"></div>
 
         <div><p>fonte: gov.br</p></div>
 
@@ -52,14 +52,14 @@
       </div>
       <div class="topico">
         <h3 style="margin-bottom: 5vw;">Como é feito a curva de oferta e demanda</h3>
-        <p>A curva de demanda possui uma curva decrescente, resultado do princípio de: quanto maior o preço, menor a quantidade demandada correspondente</p>
+        <p>A curva de demanda possui uma curva decrescente, resultado do princípio de: quanto maior o preço, menor a quantidade demandada correspondente.</p>
         <p>A curva de oferta possui uma curva crescente, devido ao comportamento dos produtores de aumentar as quantidades ofertadas caso os preços aumentem.</p>
       </div>
 
       <!--Gráfico-->
       <div class="title_main">
         <h1 style="margin-bottom: 5vw;">Simulador de oferta e demanda</h1>
-        <h3>Adicione os valores ao gráfico</h3>
+        <h4>Adicione os valores ao gráfico para gerar o grafico</h4>
       </div>
 
       <form id="form" onsubmit="return false;">
@@ -76,9 +76,30 @@
       <div style="text-align: -webkit-center;">
       <div id="grafico4" style="width: 600px;height:400px;"></div>
     </div>
-
-    <div class="topico" id="ambiente"></div>
-     
+    <div id="ambiente">
+      <h1>Impactos da agropecuária ao meio ambiente</h1>
+    </div>
+    <section class="ambiente">
+      <div class="topico2">
+        
+        <p style="text-align: left;">
+          Há diversos fatores que causam um impacto negativo por meio da agropecuária no meio ambiente, dentre eles vale destacar as principais práticas mais comuns nos agronegócios. <br> <br>
+  
+          1-	Desmatamento, a retirada da cobertura vegetal provoca a redução da biodiversidade, extinção de espécies animais e vegetais, desertificação, erosão, redução dos nutrientes do solo e contribui também para o aquecimento global. <br> <br>
+  
+          2-	Queimadas, método muito utilizado para a retirada da vegetação, intensificam a poluição atmosférica, além de reduzirem os nutrientes do solo, sendo necessário usar uma quantidade maior de produtos químicos (fertilizantes) durante o cultivo de determinados alimentos, fato que provoca a poluição do solo. <br><br>
+  
+          3-	Agrotóxicos, contaminam o solo, o lençol freático e os rios. Esses produtos, são destinados à eliminação de insetos nas plantações. As águas das chuvas, ao escoarem nessas plantações, podem transportar os agrotóxicos para os rios, causando a contaminação da água. <br><br>
+  
+          No ano de 2020, por exemplo, o Greenpeace descreveu uma ação do governo como resultado de “chuvas de agrotóxicos na cabeça da população”, visto que o governo reduziu de 500 metros para 250 metros a distância mínima entre povoados e as áreas que iriam sofrer a ação da pulverização.
+          Dessa forma, há um grande risco de contaminação para pessoas que moram nas localidades, o que pode agravar os problemas de saúde local e prejudicar o bem-estar da população. <br><br>
+  
+          Apesar da agropecuária ter um papel fundamental, pode provocar impactos negativos ao meio ambiente, tais como aquecimento global, desmatamento, extinção de espécies, compactação do solo, comprometimento das águas e emissão de gases causadores do efeito estufa (GEE). Os impactos decorrentes da agropecuária, também podem prejudicar o produtor, uma vez que, afeta diretamente a produção e a vida desse feitor. 
+  
+        </p>
+      </div>
+      <img src="./src/static/influencia-do-agronegocio.jpg" alt="" id="agro">
+    </section>
     <div><p style="text-align: center;">Todos os direitos reservados.</p></div>
 
     <script src="./src/js/main.js"></script>
