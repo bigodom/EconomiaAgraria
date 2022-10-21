@@ -138,6 +138,81 @@ option && myChart.setOption(option);
 
 }
 {
-
+  var chartDom = document.getElementById('importacaoExportacao');
+  var myChart = echarts.init(chartDom);
+  var option;
+  
+  option = {
+    title: {
+      text: 'import/export',
+    },
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      data: ['Importação', 'Exportação']
+    },
+    toolbox: {
+      show: true,
+      feature: {
+        dataView: { show: true, readOnly: false },
+        magicType: { show: true, type: ['line', 'bar'] },
+        restore: { show: true },
+        saveAsImage: { show: true }
+      }
+    },
+    calculable: true,
+    xAxis: [
+      {
+        type: 'category',
+        // prettier-ignore
+        data: [2016, 2017, 2018, 2019, 2020, 2021, 2022],
+        name: 'ano'
+      }
+    ],
+    yAxis: [
+      {
+        type: 'value',
+        name: 'em 1.000 toneladas'
+      }
+    ],
+    series: [
+      {
+        name: 'Importação',
+        type: 'bar',
+        data: [
+          9353.9, 8242.0, 9498.8, 9525.5, 10188.5, 9182.1, 8802.0
+        ],
+        markPoint: {
+          data: [
+            { type: 'max', name: 'Max' },
+            { type: 'min', name: 'Min' }
+          ]
+        },
+        markLine: {
+          data: [{ type: 'average', name: 'Avg' }]
+        }
+      },
+      {
+        name: 'Exportação',
+        type: 'bar',
+        data: [
+          33213.3, 26894.1, 44866.9, 39350.6, 25020.3, 43597.9, 51228.0
+        ],
+        markPoint: {
+          data: [
+            { type: 'max', name: 'Max' },
+            { type: 'min', name: 'Min' }
+          ]
+        },
+        markLine: {
+          data: [{ type: 'average', name: 'Avg' }]
+        }
+      }
+    ]
+  };
+  
+  option && myChart.setOption(option);
+  
   
 }
