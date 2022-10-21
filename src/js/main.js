@@ -1,11 +1,16 @@
-
-          
 var nomes = [];
 var dados = [];
-
+var maxX = 0;
+var maxY = 0;
 function teste() {
   var quantidade = document.getElementById("Quantidade").value;
+  if(quantidade > maxX){
+    maxX = quantidade;
+  }
   var preco = document.getElementById("Preco").value;
+  if(preco > maxY){
+    maxY = preco;
+  }
   alert("Informação adicionada: \n" + "Quantidade: " + quantidade + "\n" + "Preço: " + preco);
   dados.push([quantidade,preco]);
 }
@@ -23,7 +28,7 @@ title: {
   top: 0
 },
 tooltip: {
-  formatter: '({c})'
+  trigger: 'axis',
 },
 xAxis: {
   name: 'Quant'
@@ -31,7 +36,7 @@ xAxis: {
 yAxis: {
   name:'Preço',
   axisLabel: {
-    formatter: 'R${value},00'
+    formatter:'R${value},00'
   }
 },
   series: [
@@ -39,7 +44,7 @@ yAxis: {
     symbolSize: 20,
     name: 'I',
     type: 'scatter',
-    data: dados
+    data: dados,
   }
 ]
 };
@@ -54,7 +59,7 @@ option && myChart.setOption(option);
 
   option = {
     title: {
-      text: "Grafico de oferta e demanda",
+      text: "Valor Bruto da Produção ao longo dos anos",
       left: 'center',
       top: 0
     },

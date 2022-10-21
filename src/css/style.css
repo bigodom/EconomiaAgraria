@@ -51,7 +51,7 @@ p{
   max-width: 80vw;
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-top: 8vw;
+  margin-top: 5vw;
 }
 .topico2{
   text-align: center;
@@ -61,7 +61,6 @@ p{
   margin-right: 2vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 #grafico4 {
