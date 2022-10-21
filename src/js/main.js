@@ -73,7 +73,7 @@ option && myChart.setOption(option);
     },
 
     yAxis: {
-      name:'Valor(em milhões)',
+      name:'Valor(em bilhões)',
       axisLabel: {
         formatter: 'R${value}'
       }
